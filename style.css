@@ -21,9 +21,6 @@ html {
   /* === Transition === */
   --transition-duration-main: 350ms;
 }
-body{
-  font-family: "Nunito", sans-serif;
-}
 
 ul {
   list-style-type: none;
@@ -127,6 +124,18 @@ header .overlay p::before {
   }
 }
 
+
+.btn-raduis{
+  border-top-left-radius: 80px 80px;
+  transition: all .7s ease-in;
+}
+.btn-raduis:hover{
+  border-bottom-right-radius: 80px 80px;
+  border-top-left-radius: 0px 0px;
+  background-color: transparent;
+  border-color: black;
+  color:#000000;
+}
 
 /* ====== End Header ====== */
 
@@ -346,11 +355,22 @@ footer span:hover {
 .hr-card{
   margin: auto;
   height: 2px;
-  width: 50%;
+  width: 20%;
   background-color: #ce1212;
+  animation:width-animate 2s ease infinite alternate;
+  -webkit-animation:width-animate 2s ease infinite alternate;
 }
 
+@keyframes width-animate {
+  0% {
+    transform: scaleX(1.5);
+   
+}
 
+  100% {
+    transform: scaleX(0);
+  }
+}
 .courses{
   top:50%;
   right: 5%;
@@ -390,7 +410,7 @@ footer span:hover {
 
 .cardd {
 
-  width: 56%;
+  width: 62%;
   height: 300px;
   background-color: #f1f1f1;
   margin: auto;
@@ -402,7 +422,9 @@ footer span:hover {
   width: 20%;
   float: left;
 }
-
+.clearfix{
+  clear: both;
+}
 .cardd-item2 {
   width: 80%;
   float: right;
@@ -417,8 +439,8 @@ footer span:hover {
 }
 
 .triangle {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   clip-path: polygon(1% 0%, 0% 100%, 100% 100%);
   background-color: #ff305b;
   transform: rotate(89deg);
