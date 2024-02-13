@@ -65,15 +65,16 @@ body {
 .nav-item a {
   font-size: 16px;
 }
+#naVBar.scrolled {
+ 
+  border-bottom: 5px  solid #606163;
+  box-shadow: 0 5px 10px rgba(122, 121, 121, 0.5);
+ 
+}
 
 /* ====== Start Header ====== */
-header {
-  background-image: url(images/biology-1300535_1280.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat:no-repeat;
 
-}
+
 .w-40{
   width: 40%;
   margin-top: 9%;
@@ -83,8 +84,7 @@ header {
 }
 
 header .overlay {
-  background-color: hsla(0, 2%, 52%, 0.55);
-
+background-color: #fffefe;
   color: var(--clr-sec-txt);
 }
 
@@ -149,17 +149,13 @@ footer {
 
 
 i {
-  color: white;
+  color: #ce1212;
   font-size: 18px;
   transition: color 1s;
 
 }
 
-i:hover {
 
-
-  color: brown;
-}
 
 .fa-brands,
 .fab {
@@ -181,7 +177,7 @@ footer h5 {
   Font-size: 20px;
   Font-weight: 600;
   Line-height: 20px;
-  color: rgb(255, 255, 255);
+    color: #ce1212;
 }
 
 .spacial {
@@ -331,10 +327,8 @@ footer span:hover {
 
 
 
-.pic {
-  background: url(blob-haikei\ \(1\).svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.img-div{
+  height: 250px;
 }
 
 
