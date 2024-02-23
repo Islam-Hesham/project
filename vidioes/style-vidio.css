@@ -20,61 +20,32 @@
     width: 30%;
      margin: auto;}
 
-     /** nav*/
-         .btn-raduis {
-             border-top-left-radius: 80px 80px;
-             transition: all .7s ease-in;
-         }
-    
-         .btn-raduis:hover {
-             border-bottom-right-radius: 80px 80px;
-             border-top-left-radius: 0px 0px;
-             background-color: transparent;
-             border-color: black;
-         }
-         .navbar-collapse,
-         .navbar-nav {
-             width: fit-content;
-         }
-    
-    
-         .navbar-nav>li>a:hover {
-             color: var(--clr-black-main);
-    
-         }
-    
-         .navbar-nav>li>a::before {
-             content: "";
-             width: 0%;
-             height: 2px;
-             position: absolute;
-             bottom: 8px;
-             left: 16px;
-             background-color: var(--clr-red-main);
-             transition: width var(--transition-duration-main);
-         }
-    
-         .navbar-nav>li>a:hover::before {
-             width: calc(100% - 32px);
-         }
-    
-         .nav-item a {
-             font-size: 16px;
-         }
-
-
+/**header*/
+header{
+    background-image: url(../images/);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color:aliceblue;
+   
+}
+.w-40{
+    width: 40%;
+}
+.spacial {
+    Line-height: 25px;
+}
 .accordion {
     width: 100%;
     margin: 90px auto;
     color: black;
-    background-color: white;
+    
     padding: 45px 45px;
 }
 .accordion h1{
     padding: 20px 0px;
 }
 .accordion h1 span , .unite-num {
-    color:#ce1212;
+    color:#1434A4;
 }
 
 .accordion .container {

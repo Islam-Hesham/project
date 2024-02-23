@@ -22,17 +22,26 @@
 
 <body>
 
+
+    <!--load-->
+    <div class="parent-loader">
+<span class="loader"></span>
+
+    </div>
     <!--nav-->
     <nav class="navbar navbar-expand-xl bg-white  fixed-top " id="naVBar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/atom-29539_1280.png" alt="Bootstrap" width="100"
-                    height="75">البروفيسور في الكيمياء</a>
+            <div class="w-30">
+                <a class="navbar-brand" href="index.html"><img src="images/333.jpeg" alt="atom " width="100"
+                        height="" class="">البروفيسور في الكيمياء</a>
+            </div>
+           
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse flex-grow-0 W-60" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active fw-semibold p-3 position-relative overflow-hidden" aria-current="page"
@@ -51,27 +60,28 @@
 
 
                 </ul>
+            <a href="sigin/login.html" class="btn   btn-raduis btn-blue  ms-4  btn-warning border-0 " role="button"
+                aria-pressed="true">ادخل حسابك </a>
+            <a href="sigin/register.html" class=" btn   btn-raduis btn-yellow mx-2 btn-primary border-0" role="button"
+                aria-pressed="true">اعمل حساب
+                جديد</a>
+                
             </div>
-            <form class="d-flex" role="search">
-
-                <a href="sigin/index.html" class="btn   btn-raduis  me-1 bg-secondary border-0 text-white" role="button"
-                    aria-pressed="true">ادخل حسابك </a>
-                <a href="sigin/sign-up.html" class=" btn   btn-raduis ms-1 bg-danger border-0 text-white" role="button"
-                    aria-pressed="true">اعمل حساب
-                    جديد</a>
-
-            </form>
+           
         </div>
     </nav>
 
 
     <!--header-->
-    <header class="home vh-100 bg-light text-center mb-5" id="home">
+    <header class=" vh-100  text-center mb-5" id="home">
         <div class="overlay w-100 h-100 d-flex justify-content-center align-items-center flex-column gap-3">
-            <div class=" container-fluid d-flex flex-row  justify-content-between align-items-center ">
-
-                <div class="head-item w-60">
-                    <h1 class="fw-semibold">منصة متكاملة
+            <div class=" container-fluid d-flex flex-row  justify-content-between align-items-center row ">
+<div class=" w-35 ">
+    <img src="images/WhatsApp Image 2024-02-19 at 1.13.57 AM.jpeg"
+        class="   animate__animated animate__bounce animate__delay-1s animate__slower" alt="" width="100%">
+</div>
+                <div class="head-item w-50 me-3 ">
+                    <h1 class="">منصة متكاملة
                         في الكيمياء</h1>
                     <p class="job-title  fw-semibold position-relative">
 
@@ -79,12 +89,12 @@
                     <h5 class="text-muted pt-2 ">
                     موقع البروفيسور في الكمياء منصة أونلاين عربية متخصصة بالكيمياء لجميع المراحل الثانويه
                     </h5>
+                    <button onclick="info();" class=" btn btn-outline-primary    btn-raduis ms-1 my-3 " role="button"
+                        aria-pressed="true">
+                        لاشتراك معنا</button>
 
                 </div>
-                <div class="headimg w-40">
-                    <img src="images/head.jpeg" class=" mt-1  animate__animated animate__bounce animate__delay-1s animate__slower" alt=""
-                        width="80%" height="h-100">
-                </div>
+               
 
             </div>
 
@@ -97,14 +107,14 @@
 
     <!-- Wave SVG Animation -->
 
-    <div class="tutorial-link position-relative">
+    <div class="tutorial-link position-relative mb-5" id="about">
 
         <div class="waves">
             <h1 class="position-absolute courses">
 
                 أحدث الكورسات</h1>
 
-            <svg width="100%" height="60%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
                 class="transition duration-300 ease-in-out delay-150">
                 <style>
                     .path-0 {
@@ -112,99 +122,59 @@
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                     }
-
+            
                     @keyframes pathAnim-0 {
                         0% {
-                            d: path("M 0,600 L 0,150 C 53.46449813635043,135.27057284094212 106.92899627270086,120.54114568188426 158,108 C 209.07100372729914,95.45885431811574 257.7485130455471,85.10599011340507 304,102 C 350.2514869544529,118.89400988659493 394.07695154511094,163.03489386449547 445,161 C 495.92304845488906,158.96510613550453 553.9436807740093,110.75443442861297 600,85 C 646.0563192259907,59.245565571387026 680.1483253588517,55.94736842105263 718,88 C 755.8516746411483,120.05263157894737 797.4630177905838,187.4560918871765 848,194 C 898.5369822094162,200.5439081128235 957.9996034788126,146.22826403024135 1010,147 C 1062.0003965211874,147.77173596975865 1106.5385682941658,203.63085199185812 1155,219 C 1203.4614317058342,234.36914800814188 1255.846123344524,209.24832800232625 1304,191 C 1352.153876655476,172.75167199767375 1396.076938327738,161.37583599883686 1440,150 L 1440,600 L 0,600 Z");
+                            d: path("M 0,500 L 0,187 C 145.92857142857144,241.64285714285714 291.8571428571429,296.2857142857143 403,273 C 514.1428571428571,249.71428571428572 590.5000000000001,148.5 693,116 C 795.4999999999999,83.49999999999999 924.1428571428571,119.7142857142857 1053,143 C 1181.857142857143,166.2857142857143 1310.9285714285716,176.64285714285717 1440,187 L 1440,500 L 0,500 Z");
                         }
-
+            
                         25% {
-                            d: path("M 0,600 L 0,150 C 47.81800999233393,178.22977081075365 95.63601998466785,206.4595416215073 137,192 C 178.36398001533215,177.5404583784927 213.27393005366253,120.39160432472441 265,116 C 316.7260699463375,111.60839567527559 385.26825980068196,159.97404107959503 439,160 C 492.73174019931804,160.02595892040497 531.6530307436094,111.71223135689551 581,90 C 630.3469692563906,68.28776864310449 690.1196172248805,73.17703349282296 742,79 C 793.8803827751195,84.82296650717704 837.868500356869,91.57963467181264 886,118 C 934.131499643131,144.42036532818736 986.4063813476434,190.50442781992652 1026,193 C 1065.5936186523566,195.49557218007348 1092.5059742525575,154.4026540484813 1134,152 C 1175.4940257474425,149.5973459515187 1231.5697216421265,185.88495598614819 1285,192 C 1338.4302783578735,198.11504401385181 1389.2151391789366,174.05752200692592 1440,150 L 1440,600 L 0,600 Z");
+                            d: path("M 0,500 L 0,187 C 150.92857142857144,202.57142857142856 301.8571428571429,218.14285714285714 412,215 C 522.1428571428571,211.85714285714286 591.5000000000001,190.00000000000003 696,184 C 800.4999999999999,177.99999999999997 940.1428571428571,187.85714285714283 1070,191 C 1199.857142857143,194.14285714285717 1319.9285714285716,190.57142857142858 1440,187 L 1440,500 L 0,500 Z");
                         }
-
+            
                         50% {
-                            d: path("M 0,600 L 0,150 C 39.300827407544475,176.8670200111026 78.60165481508895,203.7340400222052 131,203 C 183.39834518491105,202.2659599777948 248.89420814718875,173.93085992228183 302,162 C 355.10579185281125,150.06914007771817 395.8215125961563,154.54252028866745 434,140 C 472.1784874038437,125.45747971133257 507.8197414681857,91.89905892304844 552,116 C 596.1802585318143,140.10094107695156 648.8995215311004,221.86124401913875 696,220 C 743.1004784688996,218.13875598086125 784.5821724074124,132.65596500039652 842,133 C 899.4178275925876,133.34403499960348 972.7717888392503,219.51489597927517 1030,212 C 1087.2282111607497,204.48510402072483 1128.3306722355867,103.28445108250286 1170,102 C 1211.6693277644133,100.71554891749714 1253.9055222184038,199.3472996907135 1299,224 C 1344.0944777815962,248.6527003092865 1392.047238890798,199.32635015464325 1440,150 L 1440,600 L 0,600 Z");
+                            d: path("M 0,500 L 0,187 C 93.46428571428572,231.39285714285714 186.92857142857144,275.7857142857143 298,249 C 409.07142857142856,222.21428571428572 537.75,124.25 676,94 C 814.25,63.74999999999999 962.0714285714287,101.21428571428572 1091,128 C 1219.9285714285713,154.78571428571428 1329.9642857142858,170.89285714285714 1440,187 L 1440,500 L 0,500 Z");
                         }
-
+            
                         75% {
-                            d: path("M 0,600 L 0,150 C 33.25541251420866,153.50978085595705 66.51082502841732,157.01956171191412 118,168 C 169.48917497158268,178.98043828808588 239.2121124005393,197.43153400830053 290,194 C 340.7878875994607,190.56846599169947 372.6407253694256,165.2543022548838 423,172 C 473.3592746305744,178.7456977451162 542.2249861217584,217.55125697216423 595,215 C 647.7750138782416,212.44874302783577 684.4593301435407,168.54066985645932 724,149 C 763.5406698564593,129.45933014354068 805.9376933040791,134.28606360199848 853,133 C 900.0623066959209,131.71393639800152 951.7898966401438,124.3150757355468 999,129 C 1046.2101033598562,133.6849242644532 1088.9027201353458,150.45363345581433 1141,171 C 1193.0972798646542,191.54636654418567 1254.5992228184725,215.87039044119592 1306,213 C 1357.4007771815275,210.12960955880408 1398.7003885907639,180.06480477940204 1440,150 L 1440,600 L 0,600 Z");
+                            d: path("M 0,500 L 0,187 C 141.5,209.89285714285714 283,232.78571428571428 389,217 C 495,201.21428571428572 565.5,146.75 688,120 C 810.5,93.25 985,94.21428571428572 1119,110 C 1253,125.78571428571428 1346.5,156.39285714285714 1440,187 L 1440,500 L 0,500 Z");
                         }
-
+            
                         100% {
-                            d: path("M 0,600 L 0,150 C 53.46449813635043,135.27057284094212 106.92899627270086,120.54114568188426 158,108 C 209.07100372729914,95.45885431811574 257.7485130455471,85.10599011340507 304,102 C 350.2514869544529,118.89400988659493 394.07695154511094,163.03489386449547 445,161 C 495.92304845488906,158.96510613550453 553.9436807740093,110.75443442861297 600,85 C 646.0563192259907,59.245565571387026 680.1483253588517,55.94736842105263 718,88 C 755.8516746411483,120.05263157894737 797.4630177905838,187.4560918871765 848,194 C 898.5369822094162,200.5439081128235 957.9996034788126,146.22826403024135 1010,147 C 1062.0003965211874,147.77173596975865 1106.5385682941658,203.63085199185812 1155,219 C 1203.4614317058342,234.36914800814188 1255.846123344524,209.24832800232625 1304,191 C 1352.153876655476,172.75167199767375 1396.076938327738,161.37583599883686 1440,150 L 1440,600 L 0,600 Z");
+                            d: path("M 0,500 L 0,187 C 145.92857142857144,241.64285714285714 291.8571428571429,296.2857142857143 403,273 C 514.1428571428571,249.71428571428572 590.5000000000001,148.5 693,116 C 795.4999999999999,83.49999999999999 924.1428571428571,119.7142857142857 1053,143 C 1181.857142857143,166.2857142857143 1310.9285714285716,176.64285714285717 1440,187 L 1440,500 L 0,500 Z");
                         }
                     }
                 </style>
                 <defs>
-                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="5%" stop-color="#F78DA7"></stop>
+                    <linearGradient id="gradient" x1="90%" y1="20%" x2="10%" y2="80%">
+                        <stop offset="5%" stop-color="#0693e3"></stop>
                         <stop offset="95%" stop-color="#8ED1FC"></stop>
                     </linearGradient>
                 </defs>
                 <path
-                    d="M 0,600 L 0,150 C 53.46449813635043,135.27057284094212 106.92899627270086,120.54114568188426 158,108 C 209.07100372729914,95.45885431811574 257.7485130455471,85.10599011340507 304,102 C 350.2514869544529,118.89400988659493 394.07695154511094,163.03489386449547 445,161 C 495.92304845488906,158.96510613550453 553.9436807740093,110.75443442861297 600,85 C 646.0563192259907,59.245565571387026 680.1483253588517,55.94736842105263 718,88 C 755.8516746411483,120.05263157894737 797.4630177905838,187.4560918871765 848,194 C 898.5369822094162,200.5439081128235 957.9996034788126,146.22826403024135 1010,147 C 1062.0003965211874,147.77173596975865 1106.5385682941658,203.63085199185812 1155,219 C 1203.4614317058342,234.36914800814188 1255.846123344524,209.24832800232625 1304,191 C 1352.153876655476,172.75167199767375 1396.076938327738,161.37583599883686 1440,150 L 1440,600 L 0,600 Z"
-                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
-                    class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)">
-                </path>
-                <style>
-                    .path-1 {
-                        animation: pathAnim-1 4s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                    }
-
-                    @keyframes pathAnim-1 {
-                        0% {
-                            d: path("M 0,600 L 0,350 C 51.483504718602134,312.1721034127257 102.96700943720427,274.34420682545135 150,285 C 197.03299056279573,295.65579317454865 239.61546696978507,354.7952761109202 289,374 C 338.3845330302149,393.2047238890798 394.5711226836555,372.47468873086785 441,357 C 487.4288773163445,341.52531126913215 524.1000422955932,331.3059689656084 570,327 C 615.8999577044068,322.6940310343916 671.0287081339713,324.30143540669854 722,314 C 772.9712918660287,303.69856459330146 819.7851251685213,281.48828940759734 868,292 C 916.2148748314787,302.51171059240266 965.830791191943,345.7454069629121 1019,366 C 1072.169208808057,386.2545930370879 1128.8917100637075,383.53008274075444 1178,361 C 1227.1082899362925,338.46991725924556 1268.6023685532264,296.13426207407014 1311,291 C 1353.3976314467736,285.86573792592986 1396.6988157233868,317.9328689629649 1440,350 L 1440,600 L 0,600 Z");
-                        }
-
-                        25% {
-                            d: path("M 0,600 L 0,350 C 63.0952443892252,327.9002617039837 126.1904887784504,305.80052340796743 169,320 C 211.8095112215496,334.19947659203257 234.33328927542362,384.69816807211396 281,375 C 327.6667107245764,365.30183192788604 398.4763541198551,295.4068043035766 444,284 C 489.5236458801449,272.5931956964234 509.7612942451559,319.6746147135795 557,326 C 604.2387057548441,332.3253852864205 678.4784688995214,297.89473684210526 739,323 C 799.5215311004786,348.10526315789474 846.3248301567581,432.7464379179994 885,424 C 923.6751698432419,415.2535620820006 954.2222104734462,313.1195114858971 993,291 C 1031.7777895265538,268.8804885141029 1078.7863279494568,326.77551613841234 1126,357 C 1173.2136720505432,387.22448386158766 1220.6324777287268,389.7784239604536 1273,384 C 1325.3675222712732,378.2215760395464 1382.6837611356366,364.11078801977317 1440,350 L 1440,600 L 0,600 Z");
-                        }
-
-                        50% {
-                            d: path("M 0,600 L 0,350 C 61.218033783605165,331.2675724972904 122.43606756721033,312.5351449945809 161,317 C 199.56393243278967,321.4648550054191 215.47376351476385,349.126992518967 265,345 C 314.52623648523615,340.873007481033 397.6688783737344,304.9568849295514 458,315 C 518.3311216262656,325.0431150704486 555.8507229902984,381.0454677628275 595,405 C 634.1492770097016,428.9545322371725 674.9282296650717,420.8612440191387 716,399 C 757.0717703349283,377.1387559808613 798.4363583494145,341.50955616061754 850,318 C 901.5636416505855,294.49044383938246 963.3263369372703,283.10053133839114 1015,302 C 1066.6736630627297,320.89946866160886 1108.258293901504,370.08831848581775 1155,373 C 1201.741706098496,375.91168151418225 1253.6404874567131,332.5461947183378 1302,321 C 1350.3595125432869,309.4538052816622 1395.1797562716433,329.7269026408311 1440,350 L 1440,600 L 0,600 Z");
-                        }
-
-                        75% {
-                            d: path("M 0,600 L 0,350 C 45.42992148880488,390.707644928494 90.85984297760976,431.41528985698795 143,421 C 195.14015702239024,410.58471014301205 253.99054957836586,349.04648550054196 296,347 C 338.00945042163414,344.95351449945804 363.17795870892706,402.39876814084425 408,401 C 452.82204129107294,399.60123185915575 517.2976155859262,339.3584419360808 567,331 C 616.7023844140738,322.6415580639192 651.6315789473684,366.1674641148325 695,371 C 738.3684210526316,375.8325358851675 790.1760686246002,341.9717016045891 849,341 C 907.8239313753998,340.0282983954109 973.6641465542307,371.9457294668112 1021,386 C 1068.3358534457693,400.0542705331888 1097.1673451584763,396.2453805281662 1142,367 C 1186.8326548415237,337.7546194718338 1247.666472811864,283.07274842052396 1300,276 C 1352.333527188136,268.92725157947604 1396.166763594068,309.463625789738 1440,350 L 1440,600 L 0,600 Z");
-                        }
-
-                        100% {
-                            d: path("M 0,600 L 0,350 C 51.483504718602134,312.1721034127257 102.96700943720427,274.34420682545135 150,285 C 197.03299056279573,295.65579317454865 239.61546696978507,354.7952761109202 289,374 C 338.3845330302149,393.2047238890798 394.5711226836555,372.47468873086785 441,357 C 487.4288773163445,341.52531126913215 524.1000422955932,331.3059689656084 570,327 C 615.8999577044068,322.6940310343916 671.0287081339713,324.30143540669854 722,314 C 772.9712918660287,303.69856459330146 819.7851251685213,281.48828940759734 868,292 C 916.2148748314787,302.51171059240266 965.830791191943,345.7454069629121 1019,366 C 1072.169208808057,386.2545930370879 1128.8917100637075,383.53008274075444 1178,361 C 1227.1082899362925,338.46991725924556 1268.6023685532264,296.13426207407014 1311,291 C 1353.3976314467736,285.86573792592986 1396.6988157233868,317.9328689629649 1440,350 L 1440,600 L 0,600 Z");
-                        }
-                    }
-                </style>
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="5%" stop-color="#F78DA7"></stop>
-                        <stop offset="95%" stop-color="#8ED1FC"></stop>
-                    </linearGradient>
-                </defs>
-                <path
-                    d="M 0,600 L 0,350 C 51.483504718602134,312.1721034127257 102.96700943720427,274.34420682545135 150,285 C 197.03299056279573,295.65579317454865 239.61546696978507,354.7952761109202 289,374 C 338.3845330302149,393.2047238890798 394.5711226836555,372.47468873086785 441,357 C 487.4288773163445,341.52531126913215 524.1000422955932,331.3059689656084 570,327 C 615.8999577044068,322.6940310343916 671.0287081339713,324.30143540669854 722,314 C 772.9712918660287,303.69856459330146 819.7851251685213,281.48828940759734 868,292 C 916.2148748314787,302.51171059240266 965.830791191943,345.7454069629121 1019,366 C 1072.169208808057,386.2545930370879 1128.8917100637075,383.53008274075444 1178,361 C 1227.1082899362925,338.46991725924556 1268.6023685532264,296.13426207407014 1311,291 C 1353.3976314467736,285.86573792592986 1396.6988157233868,317.9328689629649 1440,350 L 1440,600 L 0,600 Z"
+                    d="M 0,500 L 0,187 C 145.92857142857144,241.64285714285714 291.8571428571429,296.2857142857143 403,273 C 514.1428571428571,249.71428571428572 590.5000000000001,148.5 693,116 C 795.4999999999999,83.49999999999999 924.1428571428571,119.7142857142857 1053,143 C 1181.857142857143,166.2857142857143 1310.9285714285716,176.64285714285717 1440,187 L 1440,500 L 0,500 Z"
                     stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
-                    class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 300)">
-                </path>
+                    class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path>
             </svg>
         </div>
     </div>
 
-    <div class="w-50">
 
-    </div>
-    <!-- card-->
+    
   
-    <!-- ^========> Our Blog -->
-    <section class="blog py-5 bg-dark-section" id="blog">
-        <div class="container py-4">
+    <!-- courses -->
+    <section class=" py-5" id="blog">
+        <div class="container">
            
     
-            <div class="posts row g-4">
+            <div class=" row container  g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/11.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
+                    <div class="card border-0 shadow-lg  position-relative ">
+                        <div class="img-card overflow-hidden position-absolute ">
+                            <img src="images/card.jpeg" class="card-img-top w-100 h-100" alt="..." />
+                        </div>
+                     
+                        <div class="card-body ">
                             <h5 class="card-title">منهج الكيمياء أولى ثانوي ترم الاول </h5>
                             <div class="hr-card"></div>
                             <ul class="py-2">
@@ -215,8 +185,11 @@
                                 <li>أسئلة خاص بالباب الثاني</li>
                 
                             </ul>
-                            <a href="vidioes/index-vidio.html" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
+                            <a href="vidioes/index-vidio.html" class=" btn btn-outline-primary my-2 rounded-pill  ms-4 card-btn border-0" role="button"> الدخول
                                 للكورس</a>
+                              
+                                
+                               
                             <h6>
                                 March 2024
                 
@@ -226,81 +199,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/revision.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">المرجعات</h5>
-                            <div class="hr-card"></div>
-                            <ul class="py-2">
-<li>امتحان شامل</li>                               <li>شرح اهم الاجزاء</li>
-                                <li>اختبار بعد نصف ونهاية الباب</li>
-                                <li>واجب وامتحان بعد كل محاضرة</li>
-                                <li>أسئلة خاص بالباب الثاني</li>
-                
-                            </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                                للكورس</a>
-                            <h6>
-                                March 2024
-                
-                            </h6>
-                
+                    <div class="card border-0 shadow-lg  position-relative ">
+                        <div class="img-card overflow-hidden position-absolute ">
+                            <img src="images/card.jpeg" class="card-img-top w-100 h-100" alt="..." />
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/11.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">منهج الكيمياء أولى ثانوي ترم الثاني </h5>
-                            <div class="hr-card"></div>
-                            <ul class="py-2"> الكيمياء الحرارية
-</li>
-                                <li class="">الكيمياء النووية</li>
-                                <li>اختبار بعد نصف ونهاية الباب</li>
-                                <li>واجب وامتحان بعد كل محاضرة</li>
-                                <li>أسئلة خاص بالباب الثاني</li>
                 
-                            </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                                للكورس</a>
-                            <h6>
-                                March 2024
-                
-                            </h6>
-                
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/22.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">منهج الكيمياء تانيه ثانوي ترم الاول </h5>
-                            <div class="hr-card"></div>
-                            <ul class="py-2">
-                                <li class="">الكيمياء الحرارية</li>
-                                <li class="">الكيمياء النووية</li>
-                                <li>اختبار بعد نصف ونهاية الباب</li>
-                                <li>واجب وامتحان بعد كل محاضرة</li>
-                                <li>أسئلة خاص بالباب الثاني</li>
-                
-                            </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                                للكورس</a>
-                            <h6>
-                                March 2024
-                
-                            </h6>
-                
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/revision.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
+                        <div class="card-body ">
                             <h5 class="card-title">منهج الكيمياء أولى ثانوي ترم الاول </h5>
                             <div class="hr-card"></div>
                             <ul class="py-2">
@@ -311,8 +215,12 @@
                                 <li>أسئلة خاص بالباب الثاني</li>
                 
                             </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
+                            <a href="vidioes/index-vidio.html" class=" btn my-2  rounded-pill  ms-1 card-btn border-0" role="button">
+                                الدخول
                                 للكورس</a>
+                            <!-- HTML !-->
+                
+                
                             <h6>
                                 March 2024
                 
@@ -322,10 +230,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/22.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">منهج الكيمياء تانيه ثانوي ترم الثاني </h5>
+                    <div class="card border-0 shadow-lg  position-relative ">
+                        <div class="img-card overflow-hidden position-absolute ">
+                            <img src="images/card.jpeg" class="card-img-top w-100 h-100" alt="..." />
+                        </div>
+                
+                        <div class="card-body ">
+                            <h5 class="card-title">منهج الكيمياء أولى ثانوي ترم الاول </h5>
                             <div class="hr-card"></div>
                             <ul class="py-2">
                                 <li class="">الكيمياء الحرارية</li>
@@ -335,8 +246,12 @@
                                 <li>أسئلة خاص بالباب الثاني</li>
                 
                             </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
+                            <a href="vidioes/index-vidio.html" class=" btn my-2  rounded-pill  ms-1 card-btn border-0" role="button">
+                                الدخول
                                 للكورس</a>
+                            <!-- HTML !-->
+                
+                
                             <h6>
                                 March 2024
                 
@@ -346,87 +261,48 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <img src="images/33.jpeg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">منهج الكيمياء تالته ثانوي ترم الاول </h5>
-                            <div class="hr-card"></div>
-                            <ul class="py-2">
-                                <li class="">الكيمياء الحرارية</li>
-                                <li class="">الكيمياء النووية</li>
-                                <li>اختبار بعد نصف ونهاية الباب</li>
-                                <li>واجب وامتحان بعد كل محاضرة</li>
-                                <li>أسئلة خاص بالباب الثاني</li>
                 
-                            </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                                للكورس</a>
-                            <h6>
-                                March 2024
-                
-                            </h6>
-                
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-lg">
-                        <div class="img-div overflow-hidden">
-                            <img src="images/revision.jpeg" class="card-img-top w-100" alt="..." />
-                        </div>
-                       
-                        <div class="card-body">
-                            <h5 class="card-title">المرجعات</h5>
-                            <div class="hr-card"></div>
-                            <ul class="py-2">
-                                <li class="">الكيمياء الحرارية</li>
-                                <li class="">الكيمياء النووية</li>
-                                <li>اختبار بعد نصف ونهاية الباب</li>
-                                <li>واجب وامتحان بعد كل محاضرة</li>
-                                <li>أسئلة خاص بالباب الثاني</li>
-                
-                            </ul>
-                            <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                                للكورس</a>
-                            <h6>
-                                March 2024
-                
-                            </h6>
-                
-                        </div>
-                    </div>
-                </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-lg">
-                    
-                    <img src="images/33.jpeg" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">منهج الكيمياء تالته ثانوي ترم الثاني </h5>
-                        <div class="hr-card"></div>
-                        <ul class="py-2">
-                            <li class="">الكيمياء الحرارية</li>
-                            <li class="">الكيمياء النووية</li>
-                            <li>اختبار بعد نصف ونهاية الباب</li>
-                            <li>واجب وامتحان بعد كل محاضرة</li>
-                            <li>أسئلة خاص بالباب الثاني</li>
+              
             
-                        </ul>
-                        <a href="#" class=" btn my-2  rounded-pill active ms-1 bg-danger border-0" role="button"> الدخول
-                            للكورس</a>
-                        <h6>
-                            March 2024
-            
-                        </h6>
-            
-                    </div>
-                </div>
-            </div>
             </div>
             </div>
         </div>
     </section>
-   
+    <!-- ^========> Conact -->
+    <section class="contact py-5" id="contact">
+        <div class="container py-4">
+            <div class="title mb-5">
+                <h2 class="text-capitalize text-center">
+                    <span class="fw-bold">Contact</span> Us
+                </h2>
+                <p class="text-center mx-auto text-muted">
+                    It is a long established fact that a reader will be of a page when
+                    established fact looking at its layout.
+                </p>
+            </div>
+    
+            <div class="contact-means row gap-3 gap-lg-0">
+                <div class="col-lg-4 d-flex gap-2 flex-column justify-content-center align-items-center">
+                    <i class="fas fa-user fs-2 text-pink"></i>
+                    <h3 class="fw-semibold fs-5 m-0">Call Us On</h3>
+                    <a href="tel:+985 123 7856" class="text-decoration-none text-dark">+985 123 7856</a>
+                </div>
+                <div class="col-lg-4 d-flex gap-2 flex-column justify-content-center align-items-center">
+                    <i class="fas fa-envelope fs-2 text-pink"></i>
+                    <h3 class="fw-semibold fs-5 m-0">Email Us At</h3>
+                    <a href="mailto:Website.Kerri@gmail.com"
+                        class="text-decoration-none text-dark">Website.Kerri@gmail.com</a>
+                </div>
+                <div class="col-lg-4 d-flex gap-2 flex-column justify-content-center align-items-center">
+                    <i class="fas fa-location-dot fs-2 text-pink"></i>
+                    <h3 class="fw-semibold fs-5 m-0">Visit Office</h3>
+                    <span class="text-dark">202, Grasselli Street , Conway.</span>
+                </div>
+            </div>
+    
+            
+        </div>
+    </section>
     <!--cardds-->
 
     <div class="cardd my-5 " >
@@ -436,7 +312,7 @@
             </div>
 
             <div class="cardd-image">
-                <img src="images/2.jpeg" alt="">
+                <img src="images/h1.jpeg" alt="">
             </div>
         </div>
         <div class="cardd-item2">
@@ -451,56 +327,55 @@
            
         </div>
         <div class="clearfix"></div>
-         <button onclick="info();" class=" btn btn-outline-danger   join btn-raduis ms-1 my-3 " role="button"
-                    aria-pressed="true"> 
-                    لاشتراك معنا</a>
+         <a  class=" btn btn-outline-danger   join btn-raduis ms-1 my-3 " role="button"
+                    aria-pressed="true" href="courses/index.html"> 
+                   كورساتي</a>
     </div>
 
+<!--map section-->
 
+    <div class="section5 overflow-hidden vh-100 my-5" id="events">
+        <div class="container ">
 
-    <div class="section5" id="events">
-        <div class="container">
-
-
-            <div class="section5-item">
-                <h1>تواصل معنا</h1>
-                <p>
-                    موقع البروفيسور في الكمياء منصة أونلاين عربية متخصصة بالكيمياء. نعمل على نشر كل جديدة في مختلف المراحل
-                </p>
-
-                <div class="contact">
-
-                    <h5>:تواصل معنا</h5>
-                    <p class="spacial mt-3"> <i class="fas fa-location-dot pe-1 text-danger">
-
-                        </i> الشرقيه / الزقازيق
-                    </p>
-                    <p> <i class="fas fa-phone pe-1 text-danger"></i>01002225553</p>
-                    <p> <i class="fas fa-envelope pe-1 text-danger"></i>email@sitename.com</p>
-
-                </div>
-
-            </div>
-            <div class="section5-item">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.0599307371026!2d31.540886460295322!3d30.604072774752026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7f7a1e848ac8b%3A0xa82abe670863b58d!2z2YfYsdmK2Ycg2LHYstmG2Yc!5e0!3m2!1sar!2seg!4v1706649380501!5m2!1sar!2seg"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+<div class="row py-5">
+    <div class="section5-item col-md-6 col-sm-12">
+        <h1 class="my-2">تواصل معنا</h1>
+        <p>
+            موقع البروفيسور في الكمياء منصة أونلاين عربية متخصصة بالكيمياء. نعمل على نشر كل جديدة في مختلف المراحل
+        </p>
+    
+        <div class="contact">
+    
+            <h5>للاتصال:</h5>
+            <p class="spacial mt-3"> <i class="fas fa-location-dot pe-1 text-warning">
+    
+                </i> الشرقيه / الزقازيق
+            </p>
+            <p> <i class="fas fa-phone pe-1 text-warning"></i>01002225553</p>
+            <p> <i class="fas fa-envelope pe-1 text-warning"></i>email@sitename.com</p>
+    
+        </div>
+    
+    </div>
+    <div class="section5-item col-md-6 col-sm-12">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.0599307371026!2d31.540886460295322!3d30.604072774752026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7f7a1e848ac8b%3A0xa82abe670863b58d!2z2YfYsdmK2Ycg2LHYstmG2Yc!5e0!3m2!1sar!2seg!4v1706649380501!5m2!1sar!2seg"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+            
         </div>
     </div>
 
     <!--footer-->
 
-    <footer class=" container-fluid   bg-black mt-5  ">
-        <div class="img-footer text-center ">
-            <img src="img/icon.png" alt="" class="mt-5">
-        </div>
+    <footer class=" container-fluid   py-5 bg-black mt-5  ">
+        
         <div class="container">
-            <i class="fas fa-angle-up position-absolute "></i>
-            <div class="row mt-5">
+            <div class="row mt-5 ">
                 <div class="col-md-6 col-sm-12 ">
-                    <h5 class="text-danger">عن البروفيسور في الكيمياء</h5>
+                    <h5 class="fh-footer">عن البروفيسور في الكيمياء</h5>
                     <p class="mt-3">موقع البروفيسور في الكمياء منصة أونلاين عربية متخصصة بالكيمياء.
                         نعمل على نشر كل جديدة في مختلف المراحل
                     </p>

@@ -1,5 +1,19 @@
 
 
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+        document.querySelector(
+            "body").style.visibility = "hidden";
+        document.querySelector(
+            ".parent-loader").style.visibility = "visible";
+    } else {
+        document.querySelector(
+            ".parent-loader").style.display = "none";
+        document.querySelector(
+            "body").style.visibility = "visible";
+    }
+};
+
 const navbar = document.getElementById('naVBar');
 
 window.addEventListener('scroll', () => {
@@ -9,6 +23,8 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+
 
 
 
@@ -45,3 +61,5 @@ window.addEventListener('scroll', () => {
     }
    
  
+
+

@@ -5,36 +5,132 @@
 }
 html {
   scroll-behavior: smooth;
+      font-family: GraphikArabic, sans-serif;
 }
 
 /* ======== Start Variables ========*/
 :root {
   /* === Colors === */
-  --clr-red-main: #ce1212;
+  --clr-blue-main: #1434A4;
   --clr-black-main: #212529;
   --clr-sec-txt: #37373f;
   --clr-section: #eee;
+--clr-yellow-main:#f0d826;
   /* === Fonts === */
-  --font-main: "Open Sans", sans-serif;
-  --font-title: "Amatic SC", cursive;
-  --font-heading: "Inter", sans-serif;
-  /* === Transition === */
+ 
+ 
   --transition-duration-main: 350ms;
 }
+/**loading**/
+.parent-loader{
 
+  position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    background-color: black;
+    z-index: 99;
+}
+.loader {
+  width: 24px;
+  height: 80px;
+  display: block;
+  margin: 35px auto 0;
+  border: 1px solid #464444;
+  border-radius: 0 0 50px 50px;
+  position: relative;
+  box-shadow: 0px 0px #1434A4 inset;
+  background-image: linear-gradient(#1434A4 100px, transparent 0);
+  background-position: 0px 0px;
+  background-size: 22px 80px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: animloader 6s linear infinite;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  width: 28px;
+  height: 6px;
+}
+
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  bottom: -4px;
+  border-radius: 50%;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  animation: animloader1 6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    background-position: 0px 80px;
+  }
+
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+@keyframes animloader1 {
+  0% {
+    box-shadow: 4px -10px rgba(255, 255, 255, 0), 6px 0px rgba(255, 255, 255, 0), 8px -15px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0);
+  }
+
+  20% {
+    box-shadow: 4px -20px rgba(255, 255, 255, 0), 8px -10px rgba(255, 255, 255, 0), 10px -30px rgba(255, 255, 255, 0.5), 15px -5px rgba(255, 255, 255, 0);
+  }
+
+  40% {
+    box-shadow: 2px -40px rgba(255, 255, 255, 0.5), 8px -30px rgba(255, 255, 255, 0.4), 8px -60px rgba(255, 255, 255, 0.5), 12px -15px rgba(255, 255, 255, 0.5);
+  }
+
+  60% {
+    box-shadow: 4px -60px rgba(255, 255, 255, 0.5), 6px -50px rgba(255, 255, 255, 0.4), 10px -90px rgba(255, 255, 255, 0.5), 15px -25px rgba(255, 255, 255, 0.5);
+  }
+
+  80% {
+    box-shadow: 2px -80px rgba(255, 255, 255, 0.5), 4px -70px rgba(255, 255, 255, 0.4), 8px -120px rgba(255, 255, 255, 0), 12px -35px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 4px -100px rgba(255, 255, 255, 0), 8px -90px rgba(255, 255, 255, 0), 10px -120px rgba(255, 255, 255, 0), 15px -45px rgba(255, 255, 255, 0);
+  }
+}
+
+
+/**end loading**/
+    
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+
 }
 
 body {
   direction: rtl;
-  font-family: "Poppins", sans-serif;
 }
 
 
-
+/**navbar**/
 
 .navbar-collapse,
 .navbar-nav {
@@ -54,7 +150,7 @@ body {
   position: absolute;
   bottom: 8px;
   left: 16px;
-  background-color: var(--clr-red-main);
+  background-color: #1434A4;
   transition: width var(--transition-duration-main);
 }
 
@@ -75,12 +171,26 @@ body {
 /* ====== Start Header ====== */
 
 
-.w-40{
-  width: 40%;
-  margin-top: 9%;
+.w-35{
+  width: 35%;
+ 
+  margin: 10% 10% 0% 0%;
+ 
 }
-.w-60{
-  width: 60%;
+.w-35 img{
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+}
+
+.overlay{
+  background-image:url(images/bgg.jpeg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+
 }
 
 header .overlay {
@@ -90,27 +200,30 @@ background-color: #fffefe;
 
 header .overlay h1 {
   font-size: clamp(3rem, 4.7vw, 4.5rem);
+  font-weight: 900;
 }
 
 header .overlay p {
-  font-size: clamp(1.5rem, 2.75vw, 3rem);
-  color:#e96a81;
+  font-size: clamp(1.5rem, 3.75vw, 3rem);
+  color:#1434A4;
   text-shadow: 2px 2px 4px #000000;
 }
 
 header .overlay p::before {
   content: "";
-  animation: typing 15s infinite;
+  animation: typing 10s infinite;
+  -webkit-animation: typing 10s infinite;
 }
 
 
 .fa-chevron-down {
-  font-size: 1.25rem;
-  color: #fff;
+  font-size: 2.25rem;
+  color:#1434A4;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   animation: arrow-movement 1s infinite ease-out;
+  
 }
 
 
@@ -123,7 +236,15 @@ header .overlay p::before {
     bottom: 1.25rem;
   }
 }
+.btn-blue{
+    background-color: hsl(210deg 100% 44%);
+    color:white;
+}
 
+.btn-yellow{
+  background-color:#f0d826;
+  color: black;
+}
 
 .btn-raduis{
   border-top-left-radius: 80px 80px;
@@ -131,10 +252,7 @@ header .overlay p::before {
 }
 .btn-raduis:hover{
   border-bottom-right-radius: 80px 80px;
-  border-top-left-radius: 0px 0px;
-  background-color: transparent;
-  border-color: black;
-  color:#000000;
+  
 }
 
 /* ====== End Header ====== */
@@ -149,7 +267,7 @@ footer {
 
 
 i {
-  color: #ce1212;
+  color:var(--clr-blue-main);
   font-size: 18px;
   transition: color 1s;
 
@@ -166,18 +284,14 @@ i {
 
 
 
-*footer*/ footer {
-  background-image: url(images/dotted-map.png);
-  background-size: contain;
-  font-family: Poppins, sans-serif;
-}
+/*footer*/ 
 
-footer h5 {
+.fh-footer {
 
   Font-size: 20px;
   Font-weight: 600;
   Line-height: 20px;
-    color: #ce1212;
+    color: var(--clr-blue-main);
 }
 
 .spacial {
@@ -195,7 +309,7 @@ footer p {
 
 footer p:hover,
 footer span:hover {
-  color: rgb(242, 84, 84);
+  color: var(--clr-yellow-main);
 }
 
 footer span {
@@ -227,7 +341,7 @@ footer span:hover {
 
 .social-footer i:hover,
 .copy a:hover {
-  color: rgb(242, 84, 84);
+      color: var(--clr-blue-main);
 }
 
 .copy {
@@ -322,35 +436,62 @@ footer span:hover {
 
 
 
-
-
-
-
-
-.img-div{
-  height: 250px;
+.w-30{
+  width: 20%;
+}
+.W-60{
+  width: 60%;
 }
 
 
 
 
-/*card*/
+
+
+
+
+/*card courses*/
 
 .card-body {
- width: 100%;
-  top: 80%;
-  left: 5%;
+
   background-color: #f3f4f6;
  margin: auto;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, .5);
+ padding: 20% 0%  10% 0%;
+ width: 100%;
 
 }
+ /** box-shadow: 10px 5px 5px rgba(0, 0, 0, .5);*/
+.card-btn{
+  background-color:#1434A4;
+  color:white;
+}
+.card-btn :hover{
+  background-color: transparent;
+    border: 2px solid #1434A4;
+    color: #000000;
+  
+  }
+
+
+.img-card{
+  width: 90%;
+  bottom: 90%;
+  left: 5%;
+  border-radius:2%;
+
+}
+.img-card:hover img {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+ 
+}
+
 
 .hr-card{
   margin: auto;
   height: 2px;
   width: 20%;
-  background-color: #ce1212;
+  background-color: #1434A4;
   animation:width-animate 2s ease infinite alternate;
   -webkit-animation:width-animate 2s ease infinite alternate;
 }
@@ -365,8 +506,9 @@ footer span:hover {
     transform: scaleX(0);
   }
 }
+
 .courses{
-  top:50%;
+  top:30%;
   right: 5%;
   color: white;
     text-shadow: 2px 2px 4px #f0eded;
@@ -378,10 +520,7 @@ footer span:hover {
   color: var(--color-white);
 }
 
-.home-secondary__container {
-  background: linear-gradient(45deg, #9d316e, #de2d3e);
-  position: relative;
-}
+
 
 .z-10 {
   z-index: 10;
@@ -441,7 +580,7 @@ footer span:hover {
 }
 
 .cardd-image {
-  width: 14%;
+  width: 15%;
   position: absolute;
   top: 14%;
   left: 4%;
@@ -467,7 +606,6 @@ footer span:hover {
 
 .cardd-item2 p {
   padding-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
   color: rgb(85, 85, 85);
   Line-height: 25px;
   Font-weight: 400;
@@ -480,31 +618,19 @@ footer span:hover {
 
 
 
-/*5*/
-.section5-item{
-    width: 50%;
-    float: right;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 20px 0px;
-
-}
+/*map section*/
 
 .section5{
-    text-align: center;
-    height: 100vh;
+
      background-color:#f8f8f8;
-     overflow: hidden;
+    
      
   
 }
-.section5-item h1{
-    margin: 40px 0px;
-}
+
 
 .section5 p{
     color: rgb(104, 104, 104);
-     font-family:  sans-serif;
     
 }
 .contact{
@@ -518,6 +644,11 @@ footer span:hover {
 
 
 
-.bg-dark-section {
-  background-color: #eee;
-}
+
+
+/**carddd*/
+ /* CSS */
+
+
+
+ 
